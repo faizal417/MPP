@@ -1,0 +1,5 @@
+Autoroute commands:
+
+meterpreter> run autoroute -s <192.168.2.0/24> : To add route for particular subnet
+meterpreter> run autoroute -p : To print the route table
+
