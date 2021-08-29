@@ -19,3 +19,22 @@ Invoke-ShareFinder: To enumerate shares in the domain environment
  -ExcludePrint
  -ExcludeIPC
  
+Invoke-FileFinder: To find files in the shares in a domain environment
+
+Invoke-EnumerateLocalAdmin: To enumerate local admins in the network
+
+Get-NetGpo: To enumerate group policies in the domain
+
+Get-ObjectACL: To enumerate ACLs in the domain environment
+ -SamAccountName "admin" -ResolveGUIDs
+ 
+Get-NetDomain: To enumerate the current domain of the user
+
+-----------------------------------------------------------------------------------------
+
+Enter-PSSession -ComputerName <computer name> -Credential <username>: To interact with powershell with a specific user in the domain
+
+Invoke-Command -ScriptBlock {Whoami;hostname} -ComputerName <computer name> -Credential <Username> : Alternative to the above command
+
+
+
